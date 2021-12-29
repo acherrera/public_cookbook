@@ -59,16 +59,15 @@ Basically cause use `docker ps -q` and `docker ps -a -q` to do bulk operations o
     docker start (docker ps -a -q)  # Start all stopped
 ```
 
+## Networking
 
-
-## Docker-compose Commands
-
-For when you won't want to start and stop a bunch of containers manually. The docker-compose file should be stored at
-`./docker-compose.yml`
+Not entirely sure how docker handles this. It creates networks and manages them, but the definitions are a little
+challenging.
 
 ```
-    docker-compose up                   # Start the service
-    docker-compose up --force-recreate  # Start service from scratch
-    docker-compose down                 # Stop the service  
-    docker-compose rm                   # Remove contaienrs - will persist some data if run again.
+    # Show commands
+    docker network
+
+    # Remove old networks, don't ask
+    docker network prune -f
 ```
