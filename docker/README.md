@@ -27,18 +27,6 @@ newgrp docker
 
 ```
 
-## Docker-compose
-
-Docker-compose on snap is a little outdated, this is the way to get the most recent version. Note that your docker
-location may be different. Find location using `which docker-compose` and move to that location to overwrite / update
-the current install
-
-
-```
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-```
-
 ## Docker Commands 
 
 
