@@ -1,0 +1,20 @@
+08:07:58.536-main-INFO:======== Starting Run =========
+08:07:58.536-main-INFO:Running Some Mod
+08:07:58.536-module-INFO:Adding 0 and 10
+08:07:58.536-main-INFO:Some function output: 10
+08:07:58.536-main-INFO:======== Run Complete =========
+08:08:25.619-main-INFO:	======== Starting Run =========
+08:08:25.619-main-INFO:	Running Some Mod
+08:08:25.619-module-INFO:	Adding 2 and 7
+08:08:25.619-main-INFO:	Some function output: 9
+08:08:25.619-main-INFO:	======== Run Complete =========
+08:08:43.871-	main-	INFO:	======== Starting Run =========
+08:08:43.871-	main-	INFO:	Running Some Mod
+08:08:43.871-	module-	INFO:	Adding 2 and 8
+08:08:43.871-	main-	INFO:	Some function output: 10
+08:08:43.871-	main-	INFO:	======== Run Complete =========
+08:09:03.156	main	INFO:	======== Starting Run =========
+08:09:03.156	main	INFO:	Running Some Mod
+08:09:03.156	module	INFO:	Adding 10 and 8
+08:09:03.156	main	INFO:	Some function output: 18
+08:09:03.156	main	INFO:	======== Run Complete =========

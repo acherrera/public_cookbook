@@ -1,0 +1,39 @@
+" Basic config that can be easily copy/paste into a new instance without having 
+" to install powerline and plugins
+
+" Most important setting
+:imap jk <Esc>
+
+" Colors!
+syntax enable
+set background=dark
+
+" ========================== Personal Settings ===================
+
+" This is all my personal settings ===============================
+set number
+let python_highlight_all=1
+syntax on
+set incsearch
+set hlsearch
+
+"This wil allow the tab complete file finder to work ============
+set path+=**
+set wildmenu
+
+" This is for tab completion =====================================
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set textwidth=79
+set expandtab
+set autoindent
+set fileformat=unix
+
+" Always show statuslie =========================================
+set laststatus=2
+ " Use 256 colours (Use this setting only if your terminal supports 256  colours)
+
+" Code folding
+set foldmethod=indent 
+set foldnestmax=3
