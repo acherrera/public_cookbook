@@ -32,7 +32,6 @@ set fileformat=unix
 
 " Always show statuslie =========================================
 set laststatus=2
- " Use 256 colours (Use this setting only if your terminal supports 256  colours)
 
 " Code folding
 set foldmethod=indent 

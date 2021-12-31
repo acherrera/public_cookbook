@@ -14,4 +14,10 @@ Commands
     docker-compose down --volumes
 ```
 
-## Total Restart
+## Getting this onto the machine
+
+Use scp stupid - don't copy and paste like a chump.
+
+```
+    scp ./docker-compose.yml username@<ip_add>:/home/username/
+```
