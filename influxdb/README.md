@@ -158,14 +158,16 @@ in real time. Usually this is inserted automatically via a script. So.... that's
 Let's use Python to insert some data!
 
 ```python
-from influxdb imporrt InfluxDBClient(
+from influxdb import InfluxDBClient
+
+InfluxDBClient(
     host='localhost',
     port=8086,
     username='energyuser',
     password='password')
 
 line = 'power_info,sensor=motor1 power_in=123,poer_out=456'
-client.write([lin], {'db': 'energy'}, 204, 'line'}
+client.write([line], {'db': 'energy'}, 204, 'line'})
 client.close()
 ```
 
@@ -184,4 +186,13 @@ for point in points:
     print("Time: %s, power_in: %i, power_out: %i" \
           % (point['time'], point['power_in'], point['power_out']))
 client.close()
+```
+
+### Resetting
+
+Some useful commands for resetting the database:
+
+```
+    drop measurement <measurement_name>
+    drop database <database_name>
 ```
