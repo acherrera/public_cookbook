@@ -1,0 +1,43 @@
+
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+# This should be placed in ~/.config/coc/ultisnips/
+
+snippet s3down "download s3 file" b
+def download_s3(bucket, s3_key, local_path):
+	"""
+	Uses boto3 to download an S3 file
+	Args:
+		bucket: name of bucket to download from
+		s3_key: key to download
+		local_path: where to save file to
+	"""
+	bucket_name = ${1:bucket}
+	s3_key = ${2:s3_key}
+	local_path = ${3:local_path}
+	client = boto3.client("s3")
+	s3.download_file(bucket_name, s3_key, local_path)
+endsnippet
