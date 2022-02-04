@@ -29,6 +29,7 @@ newgrp docker
 
 ## Docker Commands 
 
+Listing containers
 
 ```
     docker ps       # All running
@@ -45,6 +46,19 @@ Basically cause use `docker ps -q` and `docker ps -a -q` to do bulk operations o
     docker kill (docker ps -a -q)   # Kill all (force stop)
     docker rm (docker ps -a -q)     # Remove
     docker start (docker ps -a -q)  # Start all stopped
+```
+
+Cleaning up containers. After building and testing images, there will be a  lot dangling images. That is, images that do
+not have a container associated with them. These can be cleaned up with:
+
+```
+docker image prune -a
+```
+
+Building images can be done with
+
+```
+docker build -t <image_name>:<tag> .
 ```
 
 ## Networking
