@@ -6,7 +6,7 @@ challenging and useful enough that I would like to have on hand.
 
 ## Black
 
-Formatted. Use it. It is amazing. `pip install black`
+Formatting. Use it. It is amazing. `pip install black`
 
 ```
     # Check and then reformat

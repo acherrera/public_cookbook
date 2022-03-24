@@ -6,7 +6,26 @@
 Copy the `./gitconfig` to `~/.gitconfig` to get better log output. Be sure to update username and email.
 
 
-## Things I Often Forget
+## Config
+
+Setting global config:
+
+```
+     git config --global user.name "Mona Lisa"
+     git config --global user.email "some@example.com"
+     # Checking
+     git config --global user.name
+```
+
+Setting config for the single repo:
+
+```
+     git config  user.name "Mona Lisa"
+     git config  user.email "some@example.com"
+     # Checking
+     git config  user.name
+
+```
 
 ### Remove local branches that aren't on remote
 
@@ -76,5 +95,18 @@ only checkout the previous
     git add .  # if you want to break the changes up into a few small detailed commits you'll need to add the files one by one (you can use something like tig to do line by line adds)
     git commit -m "descriptive new name for WIP work done"
     git push origin <branch_name> -f
+```
+
+### Submodules
+
+Submodules can be rather tricky. In particular, the submodule may get in a state where it is different than what the
+repp says it should be. If that is case, it will often result in `git status` showing some odd behavior. For that
+reason, it could be useful to reset all of the submodules back to what they are suppose to be. 
+
+```
+git submodule foreach git reset --hard
+
+# Recursively
+git submodule foreach --recursive git reset --hard
 ```
 

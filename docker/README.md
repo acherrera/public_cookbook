@@ -61,7 +61,16 @@ Building images can be done with
 docker build -t <image_name>:<tag> .
 ```
 
-## Networking
+### Removing All Images
+
+To remove all of the containers and images, run:
+
+```
+docker rm -vf $(docker ps -aq)
+docker rmi -f $(docker images -aq)
+```
+
+### Networking
 
 Not entirely sure how docker handles this. It creates networks and manages them, but the definitions are a little
 challenging.
@@ -73,3 +82,4 @@ challenging.
     # Remove old networks, don't ask
     docker network prune -f
 ```
+

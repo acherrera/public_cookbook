@@ -4,6 +4,9 @@ Notes for AWS CLI
 
 ## S3
 
+I will use keys, folders and directories interchangably. Technically, the "directories" in AWS are keys and they just
+give the file a unique name. However, they act a lot like directories.
+
 ### Wildcard Search
 
 For some reason this isn't just included, so here is an easy(ish) work around. Copy all files recursively, ignore all

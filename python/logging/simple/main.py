@@ -10,11 +10,15 @@ from module import some_function
 # Get up for global logging
 formatter = '%(asctime)s.%(msecs)d\t%(name)s\t%(levelname)s:\t%(message)s'
 logname = f"./logfile.log"
-logging.basicConfig(filename=logname,
-                            filemode='a',
-                            format=formatter,
-                            datefmt='%H:%M:%S',
-                            level=logging.DEBUG)
+logging.basicConfig(filemode='a',
+        format=formatter,
+        datefmt='%H:%M:%S',
+        handlers=[
+            logging.FileHandler(logname),
+            logging.StreamHandler()
+            ],
+        level=logging.DEBUG)
+
 
 if __name__ == "__main__":
     # Setup for local logger

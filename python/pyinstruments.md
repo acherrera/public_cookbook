@@ -10,7 +10,7 @@ Best way to run is to run the program as you normally would and then go back and
 viewer is pretty good
 
 
-``python
+```python
     pyinstrument ./00_runme.py
     pyinstrument --load-prev 2021-09-17T11-02-18 -r html
  ```
