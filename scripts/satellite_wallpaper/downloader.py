@@ -31,11 +31,17 @@ def add_ts(file_loc: str, dt: datetime):
     Returns:
         None
     """
-    font = ImageFont.truetype("Gidole-Regular.ttf", size=72)
+
+    # May need to change this if font is not available
+    font = ImageFont.truetype("/usr/share/fonts/truetype/Gargi/Gargi.ttf", size=72)
     text = dt.strftime("%Y%m%d%H%M")
     my_image = Image.open(file_loc)
     image_editable = ImageDraw.Draw(my_image)
-    image_editable.text((100,100), text, (250, 250, 250), font=font)
+    x_pos = 1200
+    y_pos = 100
+    offset = 5
+    image_editable.text((x_pos+offset, y_pos+offset), text, (0, 0, 0), font=font)
+    image_editable.text((x_pos, y_pos), text, (250, 250, 250), font=font)
     # my_image.save("result.jpg")
     my_image.save(file_loc)
 
