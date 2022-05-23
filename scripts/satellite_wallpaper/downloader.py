@@ -37,7 +37,7 @@ def add_ts(file_loc: str, dt: datetime):
     text = dt.strftime("%Y%m%d%H%M")
     my_image = Image.open(file_loc)
     image_editable = ImageDraw.Draw(my_image)
-    x_pos = 1200
+    x_pos = 1900
     y_pos = 100
     offset = 5
     image_editable.text((x_pos+offset, y_pos+offset), text, (0, 0, 0), font=font)
@@ -56,7 +56,7 @@ def main():
 
     aa = datetime.utcnow()
     # Account for lag in website updating
-    aa = aa - timedelta(minutes=10)
+    aa = aa - timedelta(minutes=5)
     aa.strftime("%Y%m%d%H%M")
     while aa.minute not in valid_minutes:
         aa -= timedelta(minutes=1)
