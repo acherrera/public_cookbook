@@ -52,7 +52,6 @@ def main():
     while counter < 60:
         valid_minutes.append(counter)
         counter+=5
-    valid_minutes
 
     aa = datetime.utcnow()
     # Account for lag in website updating
@@ -61,7 +60,7 @@ def main():
     while aa.minute not in valid_minutes:
         aa -= timedelta(minutes=1)
 
-    TS = aa.strftime("%Y12%-d%H%M")
+    TS = aa.strftime("%Y%j%H%M")
 
     URL_MAP = {
         "visual": (
